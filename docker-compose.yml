@@ -1,0 +1,14 @@
+# Run the Nisab API locally.
+# Usage: docker-compose up --build
+# API: http://localhost:8000/docs  (Swagger)
+#      GET http://localhost:8000/nisab?date=2021-01-09
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      # Mount data so gold/silver CSVs are available
+      - ./data:/app/data:ro
+    environment:
+      - PYTHONUNBUFFERED=1

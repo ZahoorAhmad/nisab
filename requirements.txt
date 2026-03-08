@@ -1,0 +1,4 @@
+# Nisab API
+fastapi>=0.109.0
+uvicorn[standard]>=0.27.0
+hijri-converter>=2.3.0
